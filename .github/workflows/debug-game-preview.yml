@@ -3,7 +3,6 @@ name: Debug game preview
 on:
   push:
     branches: ["main"]
-
   pull_request:
     branches: ["main"]
 
@@ -18,12 +17,15 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
+
 jobs:
-  deploy:
+  deploy-to-github-pages:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    container:
+      image: nawarian/godot-ci:3.6-beta4
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,16 +33,19 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Build game
+      - name: Build web
         run: |
-          # TODO: build godot game, output to dist/
-          mkdir dist/
-          echo "Hello Godot 3.6 template" > dist/index.html
+          mkdir -v -p dist/
+          mkdir -v -p ~/.local/share/godot
+
+          mv /root/.local/share/godot/templates/ ~/.local/share/godot/templates/
+
+          godot --no-window --verbose --export-debug "HTML5" dist/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: dist/
 
       - name: Deploy to GitHub Pages
         id: deployment
