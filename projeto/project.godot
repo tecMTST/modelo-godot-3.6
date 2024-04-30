@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Estado",
 "language": "GDScript",
 "path": "res://recursos/addons/maquina_de_estado/estado.gd"
+}, {
+"base": "Node",
+"class": "MaquinaDeEstado",
+"language": "GDScript",
+"path": "res://recursos/addons/maquina_de_estado/maquina_de_estado.gd"
 } ]
 _global_script_class_icons={
-"Estado": ""
+"Estado": "",
+"MaquinaDeEstado": ""
 }
 
 [application]
