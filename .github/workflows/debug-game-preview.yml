@@ -33,7 +33,7 @@ jobs:
 
       - name: Build web
         run: |
-          mkdir -v -p dist/
+          mkdir -v -p exportados/web
           mkdir -v -p ~/.local/share/godot
 
           mv /root/.local/share/godot/templates/ ~/.local/share/godot/templates/
@@ -43,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/
+          path: exportados/web
 
       - name: Deploy to GitHub Pages
         id: deployment
