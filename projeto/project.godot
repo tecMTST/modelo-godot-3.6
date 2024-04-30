@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Estado",
+"language": "GDScript",
+"path": "res://recursos/addons/maquina_de_estado/estado.gd"
+} ]
+_global_script_class_icons={
+"Estado": ""
+}
+
 [application]
 
 config/name="mtst-game-template"
