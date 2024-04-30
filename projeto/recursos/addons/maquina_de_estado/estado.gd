@@ -5,7 +5,7 @@ extends Node
 
 
 # Referência à função de transição da maquina de estado, usada para chamar a função de transição diretamente.
-var transicionar: FuncRef = null
+var maquina_de_estado = null
 
 
 # Função virtual, chamada por `_unhandled_input`.
