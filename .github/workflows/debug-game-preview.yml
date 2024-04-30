@@ -38,7 +38,7 @@ jobs:
 
           mv /root/.local/share/godot/templates/ ~/.local/share/godot/templates/
 
-          godot --no-window --verbose --export-debug "HTML5" dist/index.html
+          godot --no-window --verbose --path projeto/ --export-debug "HTML5" exportados/web/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
