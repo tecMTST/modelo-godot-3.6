@@ -21,6 +21,10 @@ assignees: ''
 
 ### Funções
 
+## Efeitos Colaterais
+
+- _efeitos colaterias do componente_
+
 ## Referências
 
 - _referências externas_
