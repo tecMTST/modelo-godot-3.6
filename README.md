@@ -24,6 +24,10 @@ Caso um componente seja útil e robusto o suficiente, ele poderá ser reintegrad
 ├── README.md
 ```
 
+### Componentes Reutilizaveis
+
+Componentes na pasta de addons devem ser transformados em _plugins_. Veja mais sobre: Tutorial de Plugin.
+
 ## Código
 
 ### Nomes
