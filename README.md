@@ -26,7 +26,7 @@ Caso um componente seja útil e robusto o suficiente, ele poderá ser reintegrad
 
 ### Componentes Reutilizaveis
 
-Componentes na pasta de addons devem ser transformados em _plugins_. Veja mais sobre: Tutorial de Plugin.
+Componentes na pasta de addons devem ser transformados em _plugins_. Veja mais sobre: [Tutorial de Plugin](TutorialPlugin.md).
 
 ## Código
 
