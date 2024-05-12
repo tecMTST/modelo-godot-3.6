@@ -37,7 +37,7 @@ var noChao = false
 var gatilho_pulo = false
 var pulo_crescente = false
 
-func Pular():
+func pular():
 	if modo == modo_controle.gatilho:
 		timer_buffer_pulo = tempo_de_buffer_de_pulo		
 	
