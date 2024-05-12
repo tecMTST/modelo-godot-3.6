@@ -8,6 +8,34 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "BaseControle2D",
+"language": "GDScript",
+"path": "res://addons/controles2d/Controles2DBase.gd"
+}, {
+"base": "BaseControle2D",
+"class": "ControlePulo2D",
+"language": "GDScript",
+"path": "res://addons/controles2d/ControlePulo2D.gd"
+}, {
+"base": "BaseControle2D",
+"class": "ControleSideScroling2D",
+"language": "GDScript",
+"path": "res://addons/controles2d/ControleSideScrolling2D.gd"
+}, {
+"base": "BaseControle2D",
+"class": "ControleTopDown2D",
+"language": "GDScript",
+"path": "res://addons/controles2d/ControleTopDown2D.gd"
+} ]
+_global_script_class_icons={
+"BaseControle2D": "",
+"ControlePulo2D": "",
+"ControleSideScroling2D": "",
+"ControleTopDown2D": ""
+}
+
 [application]
 
 config/name="mtst-game-template"
@@ -20,6 +48,10 @@ window/size/width=360
 window/size/height=640
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/controles2d/plugin.cfg" )
 
 [gui]
 
