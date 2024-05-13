@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "ControleTopDown2D",
 "language": "GDScript",
 "path": "res://addons/controles2d/ControleTopDown2D.gd"
+}, {
+"base": "EditorPlugin",
+"class": "GeradorObjeto",
+"language": "GDScript",
+"path": "res://addons/gerador_de_objeto/gerador_de_objeto.gd"
 } ]
 _global_script_class_icons={
 "BaseControle2D": "",
 "ControlePulo2D": "",
 "ControleSideScroling2D": "",
-"ControleTopDown2D": ""
+"ControleTopDown2D": "",
+"GeradorObjeto": ""
 }
 
 [application]
@@ -51,7 +57,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/controles2d/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [gui]
 
