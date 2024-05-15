@@ -1,73 +1,29 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://elementos/imagem/ControlePersonagem.gd" type="Script" id=1]
 [ext_resource path="res://elementos/imagem/icon.png" type="Texture" id=2]
-[ext_resource path="res://elementos/imagem/CorpoKinematicoNPC.gd" type="Script" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31, 31.5 )
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform bool active;
+uniform vec3 flash_color = rgb(1.0);
+
+
+void fragment(){
+	vec4 t = texture(TEXTURE, UV);
+	if (active == true) {
+		COLOR = vec4(flash_color, t.a);
+	}
+	
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 
 [node name="CenaPrincipal" type="Node2D"]
 
-[node name="CorpoKinematicoPlayer" type="KinematicBody2D" parent="."]
-position = Vector2( 185, 522 )
-script = ExtResource( 1 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CorpoKinematicoPlayer"]
-position = Vector2( 0, 0.5 )
-shape = SubResource( 1 )
-
-[node name="Icon" type="Sprite" parent="CorpoKinematicoPlayer"]
+[node name="Icon" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 298, 574 )
+scale = Vector2( 1.375, 1.375 )
 texture = ExtResource( 2 )
-
-[node name="CorpoKinematicoNPC" type="KinematicBody2D" parent="."]
-position = Vector2( 290, 170 )
-script = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CorpoKinematicoNPC"]
-position = Vector2( 0, 0.5 )
-shape = SubResource( 1 )
-
-[node name="Icon" type="Sprite" parent="CorpoKinematicoNPC"]
-texture = ExtResource( 2 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="CorpoKinematicoNPC"]
-
-[node name="Arvore_Dialogo" type="Control" parent="CorpoKinematicoNPC/CanvasLayer"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
-
-[node name="ColorRect" type="ColorRect" parent="CorpoKinematicoNPC/CanvasLayer/Arvore_Dialogo"]
-margin_left = -124.0
-margin_top = 234.0
-margin_right = -84.0
-margin_bottom = 274.0
-rect_scale = Vector2( 7.34572, 1.77283 )
-
-[node name="PanelContainer" type="PanelContainer" parent="CorpoKinematicoNPC/CanvasLayer/Arvore_Dialogo"]
-margin_left = -111.0
-margin_top = 244.0
-margin_right = -97.0
-margin_bottom = 258.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CorpoKinematicoNPC/CanvasLayer/Arvore_Dialogo/PanelContainer"]
-margin_left = 7.0
-margin_top = 7.0
-margin_right = 7.0
-margin_bottom = 7.0
-
-[node name="CorpoEstatico" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CorpoEstatico"]
-position = Vector2( 183, 326 )
-polygon = PoolVector2Array( -157, -318, -170, -178, -121, -6, -155, 309, 53, 284, 184, 298, 167, 28, 188, -194, 219, -266, 237, 121, 265, 372, -233, 342, -200, -350 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CorpoEstatico"]
-position = Vector2( 183, 326 )
-polygon = PoolVector2Array( -168, -326, -160, -314, -79, -267, 72, -305, 148, -260, 180, -152, 231, -298, 224, -424, -215, -414, -207, -346, -186, -338 )
