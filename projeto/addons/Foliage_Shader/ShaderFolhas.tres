@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://addons/Foliage_Shader/ShaderFolhas.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/intensidade_do_x = 10.0
+shader_param/intensidade_do_y = 2.0
+shader_param/velocidade = 2.0
+shader_param/frequencia_de_onda = 20.0
