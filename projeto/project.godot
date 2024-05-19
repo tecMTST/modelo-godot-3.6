@@ -8,22 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "KinematicBody2D",
-"class": "DialogoNPC",
-"language": "GDScript",
-"path": "res://elementos/imagem/CorpoKinematicoNPC.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "PlayerKinematico",
-"language": "GDScript",
-"path": "res://elementos/imagem/ControlePersonagem.gd"
-} ]
-_global_script_class_icons={
-"DialogoNPC": "",
-"PlayerKinematico": ""
-}
-
 [application]
 
 config/name="mtst-game-template"
