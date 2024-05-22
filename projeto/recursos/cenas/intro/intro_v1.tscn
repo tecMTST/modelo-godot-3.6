@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://elementos/imagem/logo2.png" type="Texture" id=1]
+[ext_resource path="res://elementos/musica/bgm_vinheta.mp3" type="AudioStream" id=2]
+[ext_resource path="res://recursos/cenas/intro/intro_v1.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CenterContainer/Logo2:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 1.5, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( -1, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "intro"
+length = 10.0
+
+[sub_resource type="CanvasItemMaterial" id=3]
+
+[node name="Intro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.878431, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "RESET"
+method_call_mode = 1
+anims/RESET = SubResource( 1 )
+anims/intro = SubResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Logo2" type="TextureRect" parent="CenterContainer"]
+material = SubResource( 3 )
+margin_left = 100.0
+margin_top = 240.0
+margin_right = 260.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 160, 160 )
+rect_pivot_offset = Vector2( 80, 80 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
