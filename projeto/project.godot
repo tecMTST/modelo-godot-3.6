@@ -8,26 +8,9 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "KinematicBody2D",
-"class": "DialogoNPC",
-"language": "GDScript",
-"path": "res://elementos/imagem/CorpoKinematicoNPC.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "PlayerKinematico",
-"language": "GDScript",
-"path": "res://elementos/imagem/ControlePersonagem.gd"
-} ]
-_global_script_class_icons={
-"DialogoNPC": "",
-"PlayerKinematico": ""
-}
-
 [application]
 
 config/name="mtst-game-template"
-run/main_scene="res://recursos/cenas/CenaPrincipal/CenaPrincipal.tscn"
 config/icon="res://assets/icon.png"
 
 [display]
@@ -36,6 +19,10 @@ window/size/width=360
 window/size/height=640
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[global]
+
+scroll=false
 
 [gui]
 
@@ -46,6 +33,10 @@ common/drop_mouse_on_gui_input_disabled=true
 texture={
 "flags/filter": false
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [physics]
 
