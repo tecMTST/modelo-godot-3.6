@@ -2,19 +2,34 @@
 
 [ext_resource path="res://addons/cartao_de_level.tscn" type="PackedScene" id=1]
 
-[node name="ScrollContainer" type="ScrollContainer"]
+[node name="cena_inicial" type="Control"]
 anchor_right = 1.0
-anchor_bottom = 0.991
-margin_right = 3.0
-margin_bottom = -0.240051
+anchor_bottom = 1.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 scroll_horizontal_enabled = false
 
-[node name="ColorRect" parent="." instance=ExtResource( 1 )]
-anchor_left = 0.0
-anchor_top = 0.0
+[node name="HScrollBar" type="HScrollBar" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HScrollBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+alignment = 1
+
+[node name="RectTest2" parent="HScrollBar/VBoxContainer" instance=ExtResource( 1 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 0.0
-margin_bottom = 0.0
+margin_top = 318.0
+margin_right = 360.0
+margin_bottom = 318.0
+
+[node name="RectTest" parent="HScrollBar/VBoxContainer" instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 322.0
+margin_right = 360.0
+margin_bottom = 322.0
