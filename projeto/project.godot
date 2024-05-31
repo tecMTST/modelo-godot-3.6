@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node",
-"class": "ControleDeToque",
+"class": "ControleDeSwipe",
 "language": "GDScript",
 "path": "res://addons/Controle_de_Swipe/controle_toque.gd"
 } ]
 _global_script_class_icons={
-"ControleDeToque": ""
+"ControleDeSwipe": ""
 }
 
 [application]

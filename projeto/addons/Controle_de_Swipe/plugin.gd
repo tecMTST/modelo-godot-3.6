@@ -1,10 +1,10 @@
 tool
 extends EditorPlugin
 
-
 func _enter_tree():
-	pass
+	var ControleDeSwipe = preload("res://addons/Controle_de_Swipe/Controle_Toque.tscn")
+	add_custom_type("ControleDeSwipe", "Node2D", ControleDeSwipe, preload("res://addons/Controle_de_Swipe/Group 8.svg"))
 
 
 func _exit_tree():
-	pass
+	remove_custom_type("ControleDeSwipe")
