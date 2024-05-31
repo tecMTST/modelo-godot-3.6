@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/Controle_de_Swipe/controle_toque.gd" type="Script" id=1]
+
+[node name="Controle_Toque" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 360, 640 )
+transparent_bg = true
