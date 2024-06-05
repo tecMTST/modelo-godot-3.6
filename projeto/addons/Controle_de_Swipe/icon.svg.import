@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Group 8.svg-2b937de34e7097ccc1f2ce5c8e8e5a3f.stex"
+path="res://.import/icon.svg-67db702c484d76ac81a41c110810b72d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Controle_de_Swipe/Group 8.svg"
-dest_files=[ "res://.import/Group 8.svg-2b937de34e7097ccc1f2ce5c8e8e5a3f.stex" ]
+source_file="res://addons/Controle_de_Swipe/icon.svg"
+dest_files=[ "res://.import/icon.svg-67db702c484d76ac81a41c110810b72d.stex" ]
 
 [params]
 

@@ -8,20 +8,10 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node",
-"class": "ControleDeSwipe",
-"language": "GDScript",
-"path": "res://addons/Controle_de_Swipe/controle_toque.gd"
-} ]
-_global_script_class_icons={
-"ControleDeSwipe": ""
-}
-
 [application]
 
 config/name="mtst-game-template"
-run/main_scene="res://addons/Controle_de_Swipe/Controle_Toque.tscn"
+run/main_scene="res://addons/Controle_de_Swipe/Controle_Toque_teste.tscn"
 config/icon="res://assets/icon.png"
 
 [display]
@@ -33,7 +23,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Controle_de_Swipe/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Controle_de_Movimento/plugin.cfg", "res://addons/Controle_de_Swipe/plugin.cfg" )
 
 [global]
 
