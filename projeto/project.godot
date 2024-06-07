@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="mtst-game-template"
-run/main_scene="res://addons/Controle_de_Swipe/Controle_Toque_teste.tscn"
+run/main_scene="res://recursos/cenas/CenaPrincipal/Controle_Toque_teste.tscn"
 config/icon="res://assets/icon.png"
 
 [display]
